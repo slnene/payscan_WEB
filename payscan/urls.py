@@ -37,7 +37,8 @@ urlpatterns = [
     path('transaction_history/', views.transaction_history, name='transaction_history'),
     path('scanner/', views.scanner, name='scanner'),
     path('success/<int:transaction_id>/', views.payment_success, name='payment_success'),
-    
+    path('applaunch/',views.appLaunch),
+        
     ##### Business suite ####
     path('register_business/', views.register_business, name='register_business'),
     path('login_business/', views.login_business, name='login_business'),

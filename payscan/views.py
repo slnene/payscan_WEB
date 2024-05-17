@@ -7,6 +7,11 @@ from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm,DepositForm,WithdrawForm,PaymentForm,BusinessRegistrationForm,BusinessLoginForm,BusinessPaymentForm,BusinessWithdrawForm
 from django.http import HttpResponse
 from django.http import JsonResponse
+import requests
+from django.conf import settings
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+
 
 def check_login_status(request):
     return JsonResponse({'is_logged_in': request.user.is_authenticated})
@@ -24,6 +29,9 @@ def scanner(request):
 
 def launch(request):      
     return render(request, 'payscan/index.html')
+
+def appLaunch(request):      
+    return render(request, 'payscan/usercheck.html')
 
 def home(request):
     return render(request,'payscan/home.html')
