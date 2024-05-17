@@ -1,0 +1,4 @@
+django
+whitenoise 
+sqlclient
+django_momoapi
