@@ -1,0 +1,28 @@
+{% load static %} 
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+    
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/afterlogin/" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="{% static 'img/payscan-navlogo.png' %}" alt="{% static 'img/payscanlogo.jpg' %}" width="70%">
+        </a>
+        <div >
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="/scanner"> <button class="btn-get-started" style="color:white;">Make Payment</button></a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/afterlogin/">Dashboard</a></li>
+                <li><a href="/login">Login/Register</a></li>
+                <li><a href="/register_business">Register Business</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+
+    
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    
+    </div>
+  </div>
+    </header>
